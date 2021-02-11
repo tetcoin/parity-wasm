@@ -1,4 +1,4 @@
-# parity-wasm
+# tetsy-wasm
 
 Low-level WebAssembly format library.
 
