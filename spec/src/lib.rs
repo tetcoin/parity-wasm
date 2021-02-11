@@ -1,7 +1,7 @@
 #![cfg(test)]
 
 extern crate wabt;
-extern crate parity_wasm;
+extern crate tetsy_wasm;
 
 mod run;
 

@@ -1,4 +1,4 @@
-extern crate parity_wasm;
+extern crate tetsy_wasm;
 extern crate time;
 
 use std::fs;
@@ -9,7 +9,7 @@ fn rate(file_name: &'static str, iterations: u64) {
 
 	for _ in 0..iterations {
 		let start = time::PreciseTime::now();
-		let _module = parity_wasm::deserialize_file(file_name);
+		let _module = tetsy_wasm::deserialize_file(file_name);
 		let end = time::PreciseTime::now();
 
 		total_ms += start.to(end).num_milliseconds();

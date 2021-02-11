@@ -1,4 +1,4 @@
-use parity_wasm::elements::{deserialize_buffer, Module};
+use tetsy_wasm::elements::{deserialize_buffer, Module};
 use wabt::script::{Command, CommandKind, ScriptParser};
 
 fn read_file(filename: &str) -> String {

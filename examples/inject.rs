@@ -1,12 +1,12 @@
-extern crate parity_wasm;
+extern crate tetsy_wasm;
 
 use std::env;
 
-use parity_wasm::elements;
-use parity_wasm::builder;
+use tetsy_wasm::elements;
+use tetsy_wasm::builder;
 
 pub fn inject_nop(instructions: &mut elements::Instructions) {
-	use parity_wasm::elements::Instruction::*;
+	use tetsy_wasm::elements::Instruction::*;
 	let instructions = instructions.elements_mut();
 	let mut position = 0;
 	loop {
@@ -32,7 +32,7 @@ fn main() {
 		return;
 	}
 
-	let mut module = parity_wasm::deserialize_file(&args[1]).unwrap();
+	let mut module = tetsy_wasm::deserialize_file(&args[1]).unwrap();
 
 	for section in module.sections_mut() {
 		match section {
@@ -59,5 +59,5 @@ fn main() {
 		.external().func(import_sig)
 		.build();
 
-	parity_wasm::serialize_to_file(&args[2], build.build()).unwrap();
+	tetsy_wasm::serialize_to_file(&args[2], build.build()).unwrap();
 }
