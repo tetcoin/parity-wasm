@@ -1,5 +1,5 @@
 use wabt::script::{ScriptParser, Command, CommandKind};
-use parity_wasm::elements::{Module, deserialize_buffer};
+use tetsy_wasm::elements::{Module, deserialize_buffer};
 
 pub fn spec(path: &str) {
 	let mut parser = ScriptParser::from_file(&format!("./testsuite/{}.wast", path)).expect("Can't read spec script");

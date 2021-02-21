@@ -1,13 +1,13 @@
-// Simple example of how to use parity-wasm builder api.
+// Simple example of how to use tetsy-wasm builder api.
 // Builder api introduced as a method for fast generation of
 // different small wasm modules.
 
-extern crate parity_wasm;
+extern crate tetsy_wasm;
 
 use std::env;
 
-use parity_wasm::builder;
-use parity_wasm::elements;
+use tetsy_wasm::builder;
+use tetsy_wasm::elements;
 
 fn main() {
 
@@ -43,5 +43,5 @@ fn main() {
 		.build();
 
 	// Module structure can be serialzed to produce a valid wasm file
-	parity_wasm::serialize_to_file(&args[1], module).unwrap();
+	tetsy_wasm::serialize_to_file(&args[1], module).unwrap();
 }
