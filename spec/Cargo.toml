@@ -10,4 +10,4 @@ description = "tetsy-wasm testsuite"
 
 [dependencies]
 wabt = "0.2"
-tetsy-wasm = { path = ".." }
+tetsy-wasm = { path = "..", version = "0.31.1" }
