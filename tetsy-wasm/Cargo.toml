@@ -1,0 +1,22 @@
+[package]
+name = "tetsy-wasm"
+version = "0.31.1"
+authors = ["Nikolay Volf <nikvolf@gmail.com>", "Svyatoslav Nikolsky <svyatonik@yandex.ru>", "Sergey Shulepov <s.pepyakin@gmail.com>"]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/paritytech/tetsy-wasm"
+homepage = "https://github.com/paritytech/tetsy-wasm"
+documentation = "https://tetcoin.github.io/tetsy-wasm/tetsy_wasm/"
+description = "WebAssembly binary format serialization/deserialization/interpreter"
+keywords = ["wasm", "webassembly", "bytecode", "serde", "interpreter"]
+exclude = [ "res/*", "spec/*" ]
+
+[dependencies]
+byteorder = { version = "1.0", default-features = false }
+
+[dev-dependencies]
+time = "0.1"
+
+[features]
+default = ["std"]
+std = ["byteorder/std"]
