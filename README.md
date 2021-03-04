@@ -1,11 +1,11 @@
-# parity-wasm
+# tetsy-wasm
 
 Low-level WebAssembly format library.
 
-[![Build Status](https://travis-ci.org/paritytech/parity-wasm.svg?branch=master)](https://travis-ci.org/paritytech/parity-wasm)
-[![crates.io link](https://img.shields.io/crates/v/parity-wasm.svg)](https://crates.io/crates/parity-wasm)
+[![Build Status](https://travis-ci.org/tetcoin/tetsy-wasm.svg?branch=master)](https://travis-ci.org/tetcoin/tetsy-wasm)
+[![crates.io link](https://img.shields.io/crates/v/tetsy-wasm.svg)](https://crates.io/crates/tetsy-wasm)
 
-[Documentation](https://docs.rs/parity-wasm/0.40.2/parity_wasm/)
+[Documentation](https://docs.rs/tetsy-wasm/0.40.2/tetsy_wasm/)
 
 ## Rust WebAssembly format serializing/deserializing
 
@@ -13,13 +13,13 @@ Add to Cargo.toml
 
 ```toml
 [dependencies]
-parity-wasm = "0.41"
+tetsy-wasm = "0.41"
 ```
 
 and then
 
 ```rust
-let module = parity_wasm::deserialize_file("./res/cases/v1/hello.wasm").unwrap();
+let module = tetsy_wasm::deserialize_file("./res/cases/v1/hello.wasm").unwrap();
 assert!(module.code_section().is_some());
 
 let code_section = module.code_section().unwrap(); // Part of the module with functions code
@@ -29,10 +29,10 @@ println!("Function count in wasm file: {}", code_section.bodies().len());
 
 ## Wabt Test suite
 
-`parity-wasm` supports full wabt testsuite (https://github.com/WebAssembly/testsuite), running asserts that involves deserialization.
+`tetsy-wasm` supports full wabt testsuite (https://github.com/WebAssembly/testsuite), running asserts that involves deserialization.
 
 To run testsuite:
-- make sure you have all prerequisites to build `wabt` (since parity-wasm builds it internally using `wabt-rs`, see https://github.com/WebAssembly/wabt)
+- make sure you have all prerequisites to build `wabt` (since tetsy-wasm builds it internally using `wabt-rs`, see https://github.com/WebAssembly/wabt)
 - checkout with submodules (`git submodule update --init --recursive`)
 - run `cargo test --release --manifest-path=spec/Cargo.toml`
 
@@ -51,12 +51,12 @@ in a `no_std` context, add the following to your `Cargo.toml` (still requires al
 
 ```toml
 [dependencies]
-parity-wasm = { version = "0.41", default-features = false }
+tetsy-wasm = { version = "0.41", default-features = false }
 ```
 
 # License
 
-`parity-wasm` is primarily distributed under the terms of both the MIT
+`tetsy-wasm` is primarily distributed under the terms of both the MIT
 license and the Apache License (Version 2.0), at your choice.
 
 See LICENSE-APACHE, and LICENSE-MIT for details.
@@ -64,5 +64,5 @@ See LICENSE-APACHE, and LICENSE-MIT for details.
 ### Contribution
 
 Unless you explicitly state otherwise, any contribution intentionally submitted
-for inclusion in parity-wasm by you, as defined in the Apache-2.0 license, shall be
+for inclusion in tetsy-wasm by you, as defined in the Apache-2.0 license, shall be
 dual licensed as above, without any additional terms or conditions.

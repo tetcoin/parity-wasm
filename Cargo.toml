@@ -1,12 +1,12 @@
 [package]
-name = "parity-wasm"
+name = "tetsy-wasm"
 version = "0.41.0"
 authors = ["Nikolay Volf <nikvolf@gmail.com>", "Svyatoslav Nikolsky <svyatonik@yandex.ru>", "Sergey Shulepov <s.pepyakin@gmail.com>"]
 license = "MIT/Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/paritytech/parity-wasm"
-homepage = "https://github.com/paritytech/parity-wasm"
-documentation = "https://paritytech.github.io/parity-wasm/parity_wasm/"
+repository = "https://github.com/tetcoin/tetsy-wasm"
+homepage = "https://github.com/tetcoin/tetsy-wasm"
+documentation = "https://tetcoin.github.io/tetsy-wasm/tetsy_wasm/"
 description = "WebAssembly low-level format library"
 keywords = ["wasm", "webassembly", "bytecode", "serde", "interpreter"]
 categories = ["wasm", "parser-implementations"]

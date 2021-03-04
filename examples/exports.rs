@@ -1,11 +1,11 @@
 // This examples allow to query all function exports of the
 // provided wasm module
 
-extern crate parity_wasm;
+extern crate tetsy_wasm;
 
 use std::env::args;
 
-use parity_wasm::elements::{Internal, External, Type, FunctionType, Module};
+use tetsy_wasm::elements::{Internal, External, Type, FunctionType, Module};
 
 // Auxillary function to resolve function type (signature) given it's callable index
 fn type_by_index(module: &Module, index: usize) -> FunctionType {
@@ -54,7 +54,7 @@ fn main() {
 
 	// Here we load module using dedicated for this purpose
 	// `deserialize_file` function (which works only with modules)
-	let module = parity_wasm::deserialize_file(&args[1]).expect("File to be deserialized");
+	let module = tetsy_wasm::deserialize_file(&args[1]).expect("File to be deserialized");
 
 	// Query the export section from the loaded module. Note that not every
 	// wasm module obliged to contain export section. So in case there is no
